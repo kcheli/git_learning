@@ -6,6 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Drummers</title>
     </head>
+    <style>
+        ul li ul {
+            display: none;
+        }
+        img {
+            width: 50%;
+        }
+    </style>
     <body>
         <h1><b>Jazz Drummers</b></h1>
         <h2 style="color:green"><i>Find all the best jazz drummers here!</i></h2>
@@ -27,7 +35,12 @@
         <ul>
             <li><a href="https://www.drummerworld.com/drummers/Chick_Webb.html" target="_blank">Chick Webb</a></li>
             <li><a href="https://www.drummerworld.com/drummers/Baby_Dodds.html" target="_blank">Baby Dodds</a></li>
-            <li>Kenny Clarke</li>
+            <li><button onClick="kennyClicked()">Kenny Clarke</button>
+                <ul id="kenny-clarke-list">
+                    <li><img src="https://www.drummerworld.com/drummerworld/kennyclarkepersson.jpg" alt="Clark pic 1" /></li>
+                    <li><img src="https://www.drummerworld.com/pics/drumpics34/kennyclarke500mikecreasy.jpg" alt="Clark pic 2" /></li>
+                </ul>
+            </li>
             <li>Max Roach</li>
             <li>Philly Joe Jones</li>
             <li>Elvin Jones</li>
@@ -35,13 +48,14 @@
         </ul>
         <input style = "padding: 5px" size ="32" type = "text" placeholder = "Tell us, who is your favorite drummer?">
     </body><button type = "submit">Submit</button>
-    <script>
-        var x = 5
-        function printStrings(num){
-            for(var i = 0; i < num; i++){
-                console.log(`string ${i}`)
+    <script type="text/javascript">
+        function kennyClicked() {
+            var x = document.getElementById("kenny-clarke-list");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
             }
         }
-        printStrings(x)
     </script>
 </html>
