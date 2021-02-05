@@ -130,11 +130,10 @@
 # count_evens_odds(100, 3)
 
 
-x = input("Give me input: ")
-y = int(x)
-print(type(y))
+# x = input("Give me input: ")
+# y = int(x)
+# print(type(y))
 
 
 # for x in range(0, 100, 2):
 #     print("{:.2f}".format(x/100))
-
