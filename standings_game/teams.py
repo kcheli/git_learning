@@ -19,3 +19,4 @@ eve = Team("Everton", "EVE", 0)
 lci = Team("Leicester", "LCI", 0)
 
 all_teams = [mun, che, tot, liv, ars, mci, eve, lci]
+fdsajfkld;asf
