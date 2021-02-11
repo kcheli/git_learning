@@ -16,5 +16,6 @@ liv = Team("Liverpool", "LIV", 0)
 ars = Team("Arsenal", "ARS", 0)
 mci = Team("Manchester City", "MCI", 0)
 eve = Team("Everton", "EVE", 0)
+lci = Team("Leicester", "LCI", 0)
 
-all_teams = [mun, che, tot, liv, ars, mci, eve]
+all_teams = [mun, che, tot, liv, ars, mci, eve, lci]
