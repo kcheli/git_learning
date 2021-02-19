@@ -5,15 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Drummers</title>
+        <script type="text/javascript" src="index.js"></script>
+        <link href="index.css" rel="stylesheet">
     </head>
-    <style>
-        ul li ul {
-            display: none;
-        }
-        img {
-            width: 50%;
-        }
-    </style>
     <body>
         <h1><b>Jazz Drummers</b></h1>
         <h2 style="color:green"><i>Find all the best jazz drummers here!</i></h2>
@@ -33,29 +27,53 @@
         alt = "Papa Jo Jones" style="width: 50%">
         <img src = "./assets/Papa Jo.jpg" alt = "Papa Jo Jones" style="width: 50%">
         <ul>
-            <li><a href="https://www.drummerworld.com/drummers/Chick_Webb.html" target="_blank">Chick Webb</a></li>
-            <li><a href="https://www.drummerworld.com/drummers/Baby_Dodds.html" target="_blank">Baby Dodds</a></li>
-            <li><button onClick="kennyClicked()">Kenny Clarke</button>
-                <ul id="kenny-clarke-list">
+            <!-- Chick Webb -->
+            <li><button class='buttonStyles' name="chick-webb-list" onClick="buttonClicked(this.name)">Chick Webb</button>
+                <ul style="display: none;" id="chick-webb-list">
+                    <li><img src="https://www.drummerworld.com/drummerworld/chickwebb840def.jpg" alt="Webb pic 1" /></li>
+                    <li><img src="https://www.drummerworld.com/drummerworld/chickwebb550kjhuzyya.jpg" alt="Webb pic 2" /></li>
+                </ul>
+            </li>
+            
+            <!-- Baby Dodds -->
+            <li><button class='buttonStyles' name="baby-dodds-list" onClick="buttonClicked(this.name)">Baby Dodds</button>
+                <ul style="display: none;" id="baby-dodds-list">
+                    <li><img src="https://www.drummerworld.com/drummerworld1/babydodds840.jpg" alt="Dodds pic 1" /></li>
+                </ul>
+            </li>
+            <!-- Kenny Clarke -->
+            <li><button class='buttonStyles' name="kenny-clarke-list" onClick="buttonClicked(this.name)">Kenny Clarke</button>
+                <ul style="display: none;" id="kenny-clarke-list">
                     <li><img src="https://www.drummerworld.com/drummerworld/kennyclarkepersson.jpg" alt="Clark pic 1" /></li>
                     <li><img src="https://www.drummerworld.com/pics/drumpics34/kennyclarke500mikecreasy.jpg" alt="Clark pic 2" /></li>
                 </ul>
             </li>
-            <li>Max Roach</li>
-            <li>Philly Joe Jones</li>
-            <li>Elvin Jones</li>
-            <li>Tony Williams</li>
+
+            <!-- Max Roach -->
+            <li><button class='buttonStyles' name="max-roach-list" onClick="buttonClicked(this.name)">Max Roach</button>
+                <ul style="display: none;" id="max-roach-list">
+                    <li><img src="https://www.drummerworld.com/drummerworld/maxroach750.jpg" alt="Max pic 2" /></li>
+                </ul>
+            </li>
+            <!-- Philly Joe -->
+            <li><button class='buttonStyles' name="philly-joe-list" onClick="buttonClicked(this.name)">Philly Joe Jones</button>
+            <ul style="display: none;" id="philly-joe-list">
+            <li><img src="https://www.drummerworld.com/drummerworld2/phillyjoejones840.jpg" alt="Philly Joe pic"/></li>
+            </ul>
+            </li>
+            <li><button class='buttonStyles' name="elvin-jones-list" onClick="buttonClicked(this.name)">Elvin Jones</button>
+            <ul style="display:none;" id="elvin-jones-list">
+            <li><img src="https://www.drummerworld.com/drummerworld/elvinjones840kjh234.jpg" alt="Elvin Jones pic"/></li>
+            </ul>
+            </li>
+            <li><button class='buttonStyles' name="tony-williams-list" onClick="buttonClicked(this.name)">Tony Williams</button>
+            <ul style="display:none;" id="tony-williams-list">
+            <li><img src="https://www.drummerworld.com/drummerworld/tonywilliams840uuper.jpg" alt="Tony Williams pic"/>
+            </li>
+            </ul>
+            </li>
         </ul>
         <input style = "padding: 5px" size ="32" type = "text" placeholder = "Tell us, who is your favorite drummer?">
     </body><button type = "submit">Submit</button>
-    <script type="text/javascript">
-        function kennyClicked() {
-            var x = document.getElementById("kenny-clarke-list");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-    </script>
+    
 </html>

@@ -14,15 +14,13 @@ class Team:
     # stores the results of a team's latest game
     self.single_game_points_holder = 0
 
-mun = Team("Manchester United", "MUN")
-che = Team("Chelsea", "CHE")
-tot = Team("Tottenham Hotspurs", "TOT")
-liv = Team("Liverpool", "LIV")
-ars = Team("Arsenal", "ARS")
-mci = Team("Manchester City", "MCI")
-eve = Team("Everton", "EVE")
-lci = Team("Leicester", "LCI")
-
-# all_teams = [mun, che, tot, liv, ars, mci, eve, lci]
-all_teams = [mun, che, tot, liv, eve, lci]
-# all_teams = [mun, che, tot]
+mun = Team("Manchester United", "MUN", 0)
+che = Team("Chelsea", "CHE", 0)
+tot = Team("Tottenham Hotspurs", "TOT", 0)
+liv = Team("Liverpool", "LIV", 0)
+ars = Team("Arsenal", "ARS", 0)
+mci = Team("Manchester City", "MCI", 0)
+eve = Team("Everton", "EVE", 0)
+lci = Team("Leicester", "LCI", 0)
+whu = Team("West Ham United", "WHU", 0)
+all_teams = [mun, che, tot, liv, ars, mci, eve, lci, whu]
