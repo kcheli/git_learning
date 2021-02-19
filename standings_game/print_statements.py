@@ -7,17 +7,20 @@ def print_welcome_message(total_num_games):
    print(f"Welcome! There will be {total_num_games} games in this tournament\n")
 
 def print_single_game_results(results):
-   if len(results) > 1:
-      print(f"{results[0].name} vs. {results[1].name} resulted in a draw!\n")
-   if len(results) == 1:
-      print(f"{results[0].name} is the winner!\n")
+   draw = results[0].single_game_points_holder == results[1].single_game_points_holder
+   if draw:
+      print(f"{results[0].name} vs. {results[1].name} resulted in a draw with {results[0].single_game_points_holder} points each!\n")
+   else:
+      winner = results[0] if results[0].single_game_points_holder > results[1].single_game_points_holder else results[1]
+      loser = results[0] if results[0].single_game_points_holder < results[1].single_game_points_holder else results[1]
+      print(f"{winner.name} won with {winner.single_game_points_holder} points against {loser.name} with {loser.single_game_points_holder} points!\n")
 
 def print_standings(all_teams, game_number, total_num_games):
    # check if we are on the final match - "game_number == total_num_games" -returns a boolean
    is_final_match = game_number == total_num_games
 
    # create a new list form the list of teams, orgainzed by # of points
-   standings = sorted(all_teams, key=lambda x: x.points, reverse=True)
+   standings = sorted(all_teams, key=lambda x: (x.points, x.goal_diff), reverse=True)
 
    # print the results of a normal match
    print_results(is_final_match, game_number, standings)
@@ -44,7 +47,7 @@ def print_results(is_final_match, game_number, standings):
 
    # loop thourgh the teams and print their total points
    for index, team in enumerate(standings):
-      print(f"{index+1}. {team.name} ({team.abbreviation}) has {team.points} points")
+      print(f"{index+1}. {team.name} ({team.abbreviation}) has {team.points} points and a goal difference of {team.goal_diff}")
 
    # print extra line for cleaner spacing (optional) 
    print("\n")

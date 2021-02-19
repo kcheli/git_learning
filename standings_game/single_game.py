@@ -1,5 +1,6 @@
 # import "print_statements" functions
 from print_statements import print_competitor_names
+import random
 
 def get_input(team_one, team_two):
    user_input = input(
@@ -28,14 +29,27 @@ def play_single_game(teams, game_number, total_num_games):
 
    # if draw, assign each team 1 point and print the results
    if result == "DRAW":
+      # set a draw score
+      points = random.randrange(0, 5)
+   
       team_one.points += 1
       team_two.points += 1
-      # print draw results
-      # print_draw(teams)
-      return teams
+
+      # set each team's single_game_points_holder to the draw score
+      team_one.single_game_points_holder = points
+      team_two.single_game_points_holder = points
+      # return teams
 
    # if not a draw
    else:
+      # generate two random scores
+      points_a = random.randrange(0, 5)
+      points_b = random.randrange(0, 5)
+
+      # set the higher score to "winning_score"
+      winning_score = points_a if points_a > points_b else points_b
+      # set the lower score to "losing_score"
+      losing_score = points_a if points_a < points_b else points_b
       winner = ""
       # loop through teams
       for team in [team_one, team_two]:
@@ -45,9 +59,15 @@ def play_single_game(teams, game_number, total_num_games):
             team.points += 3
             # set that team object to the "winner" variable to print at line 35
             winner = team
-      # print winner
-      # print_winner(winner)
-      return [winner]
+            # set the number of points the winning team won with
+            winner.single_game_points_holder = winning_score
+         else:
+            # set the number of points the losing team lost with
+            team.single_game_points_holder = losing_score
+      # set each teams goal difference
+      team_one.goal_diff = winning_score - losing_score
+      team_two.goal_diff = losing_score - winning_score
+   return teams
       
 
 
