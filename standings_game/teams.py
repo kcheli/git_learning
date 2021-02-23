@@ -4,10 +4,15 @@ def create_matchups(teams):
     return list(itertools.combinations(teams, 2))
 
 class Team:
-  def __init__(self, name, abbreviation, points):
+  def __init__(self, name, abbreviation):
     self.name = name
     self.abbreviation = abbreviation.upper()
-    self.points = points
+    # stores points gained for win or draw
+    self.points = 0
+    # records goal difference
+    self.goal_diff = 0
+    # stores the results of a team's latest game
+    self.single_game_points_holder = 0
 
 mun = Team("Manchester United", "MUN", 0)
 che = Team("Chelsea", "CHE", 0)
