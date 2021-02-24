@@ -61,12 +61,12 @@ def play_single_game(teams, game_number, total_num_games):
             winner = team
             # set the number of points the winning team won with
             winner.single_game_points_holder = winning_score
+            winner.goal_diff = winning_score - losing_score
          else:
             # set the number of points the losing team lost with
             team.single_game_points_holder = losing_score
+            team.goal_diff = losing_score - winning_score
       # set each teams goal difference
-      team_one.goal_diff = winning_score - losing_score
-      team_two.goal_diff = losing_score - winning_score
    return teams
       
 

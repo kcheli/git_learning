@@ -1,6 +1,6 @@
 def print_competitor_names(team_one, team_two):
-   print(f"Team 1 is {team_one.name} ({team_one.abbreviation})")
-   print(f"Team 2 is {team_two.name} ({team_two.abbreviation})")
+   print(f"Home team is {team_one.name} ({team_one.abbreviation})")
+   print(f"Away team is {team_two.name} ({team_two.abbreviation})")
 
 def print_welcome_message(total_num_games):
    print("\n--- --- --- --- --- --- --- --- --- ---\n")
@@ -13,7 +13,7 @@ def print_single_game_results(results):
    else:
       winner = results[0] if results[0].single_game_points_holder > results[1].single_game_points_holder else results[1]
       loser = results[0] if results[0].single_game_points_holder < results[1].single_game_points_holder else results[1]
-      print(f"{winner.name} won with {winner.single_game_points_holder} points against {loser.name} with {loser.single_game_points_holder} points!\n")
+      print(f"{winner.name} won with {winner.single_game_points_holder} goals against {loser.name} with {loser.single_game_points_holder} goals!\n")
 
 def print_standings(all_teams, game_number, total_num_games):
    # check if we are on the final match - "game_number == total_num_games" -returns a boolean
