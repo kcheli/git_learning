@@ -73,7 +73,25 @@
             </ul>
             </li>
         </ul>
-        <input style = "padding: 5px" size ="32" type = "text" placeholder = "Tell us, who is your favorite drummer?">
-    </body><button type = "submit">Submit</button>
+
+        <input 
+            id="submitField" 
+            style = "padding: 5px" 
+            size ="32" 
+            type="text" 
+            placeholder="Tell us, who is your favorite drummer?"
+        >
+
+        <button 
+            type="submit" 
+            onClick="addToList(document.getElementById('submitField').value)"
+        >
+            Submit
+        </button>
+        
+        <ul id="submitList"></ul>
+
+
+    </body>
     
 </html>
