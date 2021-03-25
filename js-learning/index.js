@@ -1,5 +1,13 @@
-function sum(a, b) {
-   return a + b;
+function sum(a, b, c) {
+   if (c === "+") {
+      return a + b;
+   } else if (c === "-") {
+      return a - b;
+   } else if (c === "*") {
+      return a * b;
+   } else if (c === "/") {
+      return a / b;
+   }
 };
 
 const catalog = [
@@ -32,7 +40,3 @@ module.exports = {
    catalog: catalog,
    values: [a, b, c, sum, catalog]
 }
-
-
-export const newVariable = "hooray it worked"
-
