@@ -1,0 +1,9 @@
+h1 {
+    color: green;
+    border-style: solid;
+    border-color: black;
+    background-color: #09d6fa;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <title>Formulario</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link href="formulario.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Formulario</h1>
+        <div>
+            <fieldset>
+                <form action='datosFormulario.html'>
+                    <label for='nombre'>Nombre</label>
+                    <input type='text', id='nombre'>
+                    <label for='apellido'>Apellido</label>
+                    <input type='text', id='apellido'>
+                    <br />
+                    <label for='correo'>Correo</label>
+                    <input type='email', id='correo'>
+                    <label for='sexo'>Sexo</label>
+                    <select id='sexo' name='sexo'>
+                        <option value='masculino'>Masculino</option>
+                        <option value='femenino'>Femenino</option>
+                    </select>
+                    <br />
+                    <p>Eres mayor de edad?</p>
+                    <label for='mayor de edad'>Sí</label>
+                    <input type='radio' id='mayor de edad' name='edad' value='mayor de edad'>
+                    <label for='menor de edad'>No</label>
+                    <input type='radio' id='menor de edad' name='edad' value='menor de edad'>
+                    <button>Aceptar</button>
+                </form>
+            </fieldset>
+        </div>
+    </body>
+    
+</html>

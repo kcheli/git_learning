@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <html lang="en">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +12,8 @@
     </head>
     <body>
         <h1><b>Jazz Drummers</b></h1>
-        <h2 style="color:green"><i>Find all the best jazz drummers here!</i></h2>
-        <div style="
-            color:blue; 
-            border-style: solid; 
-            border-color: black; 
-            padding: 3px; 
-            margin: 3px;
-            width: 50%;
-            margin-bottom: 1rem;
-        ">
+        <h2><i>Find all the best jazz drummers here!</i></h2>
+        <div id = 'description';>
             <em>This is a page dedicated to all the great jazz drummers past and present
                 </em>
         </div>
@@ -74,14 +68,16 @@
             </li>
         </ul>
 
+        <!-- 1. input box -->
         <input 
             id="submitField" 
             style = "padding: 5px" 
             size ="32" 
             type="text" 
-            placeholder="Tell us, who is your favorite drummer?"
+            placeholder="Name a drummer and find out his style!"
         >
 
+        <!-- 2. button, submits input box value to function -->
         <button 
             type="submit" 
             onClick="addToList(document.getElementById('submitField').value)"
@@ -89,7 +85,11 @@
             Submit
         </button>
         
-        <ul id="submitList"></ul>
+        <!-- 3. list to display function results -->
+        <ul id="submitList">
+            <!-- 4. 
+                <li id="user input">tony williams  - style</li> -->
+        </ul>
 
 
     </body>
